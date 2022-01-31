@@ -13,13 +13,7 @@ import (
 // topCmd represents the top command
 var topCmd = &cobra.Command{
 	Use:   "top",
-	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Short: "Run `top -n 1` on the remote host and store the output",
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("top called")
 	},
