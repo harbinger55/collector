@@ -5,8 +5,7 @@ Copyright © 2022 Dave Nash dave@davenash.dev
 package cmd
 
 import (
-	"fmt"
-
+	"github.com/harbinger55/collector/foundation/sys"
 	"github.com/spf13/cobra"
 )
 
@@ -15,7 +14,8 @@ var dfCmd = &cobra.Command{
 	Use:   "df",
 	Short: "Run `df -h` on the remote host and store the output",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("df called")
+		sys.SshAgentConnect("user", "host")
+		// sys.SshPassPhraseConnect("keyFile", "user", "host")
 	},
 }
 
